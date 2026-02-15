@@ -1,6 +1,8 @@
 class Vehicle:
-    fare = 100
+    def __init__(self, fare):
+        self.fare = fare
 class Bus(Vehicle):
-    pass
-b = Bus()
-print(b.fare)
+    def total_fare(self):
+        return self.fare + 10   # extra charge
+b = Bus(100)
+print(b.total_fare())
